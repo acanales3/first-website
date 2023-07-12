@@ -1,0 +1,463 @@
+/*
+
+    INDEX CSS CODE
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body {
+	text-align: center;
+}
+.wrapper {
+	width: 1170px;
+	margin: 0 auto;
+}
+header {
+	height: 100px;
+	background: #262626;
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+}
+nav {
+	text-align: center;
+	line-height: 100px;
+}
+nav a {
+	text-decoration: none;
+	font-family: poppins;
+	letter-spacing: 4px;
+	font-size: 20px;
+	margin: 0 10px;
+	color: #fff;
+    display: inline-block;
+    position: relative;
+}
+nav a::after{
+    content: '';
+    height: 6px;
+    width: 0;
+    background: purple;
+    position: absolute;
+    left: 0;
+    top: 65px;
+    border-radius: 25px;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+nav a:hover::after{
+    width: 100%;
+    left: 0;
+}
+.banner-area {
+    width: 100%;
+    height: 700px;
+    position: fixed;
+    top: 100px;
+    overflow: hidden;
+}
+.banner-area::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./images/grad.jpg);
+    background-size: cover;
+    background-position: center center;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.banner-area::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: -1;
+}
+
+.banner-area h2 {
+    padding-top: 5%;
+    font-size: 70px;
+    font-family: poppins;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 5px rgb(255, 235, 59);
+    animation: shadowEffect 4s ease-in-out infinite;
+}
+
+@keyframes shadowEffect {
+    0%,
+    100% {
+        text-shadow: 0px 0px 0px rgb(255, 230, 0);
+        font-size: 70px;
+        color: rgb(210, 210, 210);
+    }
+    50% {
+        text-shadow: 0px 0px 20px rgb(255, 230, 0);
+        font-size: 70px;
+        color: rgb(235, 235, 235);
+    }
+}
+
+.content-area {
+	width: 100%;
+	position: relative;
+	top: 400px;
+	background: #dbdbdb;
+	height: 2000px;
+}
+.content-area h2 {
+	font-family: poppins;
+	letter-spacing: 2px;
+	padding-top: 30px;
+	font-size: 50px;
+	margin: 0;
+    font-weight: bold;
+    color: #262626;
+}
+.content-area p {
+	padding: 2% 0px;
+	font-family: poppins;
+	line-height: 30px;
+    font-size: 20px;
+    color: #262626;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container li {
+    font-family: poppins;
+    font-size: 15px;
+    color: #262626;
+}
+
+.grid-container li.list-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.slideshow-container {
+    max-width: 400px;
+    max-height: 300 px;
+    position: relative;
+    margin: auto;
+}
+  
+  /* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171; 
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*
+
+    SOCIALS CSS CODE
+
+*/
+
+.box {
+    position: absolute;
+    top: 40px;
+    left: 520px;
+    width: 400px;
+    height: 150px;
+    background-color: #262626;
+    pointer-events: auto;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: poppins;
+    transition: transform 0.2s ease;
+}
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+.box-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #dbdbdb;
+    pointer-events: none;
+    font-size: 80px;
+    text-align: center;
+}
+
+.box-link a {
+    pointer-events: auto;
+    text-decoration: none;
+    color: #dbdbdb;
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box-2 {
+    position: absolute;
+    top: 220px;
+    left: 520px;
+    width: 400px;
+    height: 150px;
+    background-color: #262626;
+    pointer-events: auto;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: poppins;
+    transition: transform 0.2s ease;
+}
+
+.box-2:hover{
+    transform: scale(1.1);
+}
+
+.box-link-2 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #dbdbdb;
+    pointer-events: none;
+    font-size: 80px;
+    text-align: center;
+}
+
+.box-link-2 a {
+    pointer-events: auto;
+    text-decoration: none;
+    color: #dbdbdb;
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box-3 {
+    position: absolute;
+    top: 400px;
+    left: 520px;
+    width: 400px;
+    height: 150px;
+    background-color: #262626;
+    pointer-events: auto;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: poppins;
+    transition: transform 0.2s ease;
+}
+
+.box-3:hover{
+    transform: scale(1.1);
+}
+
+.box-link-3 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #dbdbdb;
+    pointer-events: none;
+    font-size: 80px;
+    text-align: center;
+}
+
+.box-link-3 a {
+    pointer-events: auto;
+    text-decoration: none;
+    color: #dbdbdb;
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box-4 {
+    position: absolute;
+    top: 580px;
+    left: 520px;
+    width: 400px;
+    height: 150px;
+    background-color: #262626;
+    pointer-events: auto;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: poppins;
+    transition: transform 0.2s ease;
+}
+
+.box-4:hover{
+    transform: scale(1.1);
+}
+
+.box-link-4 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #dbdbdb;
+    pointer-events: none;
+    font-size: 80px;
+    text-align: center;
+}
+
+.box-link-4 a {
+    pointer-events: auto;
+    text-decoration: none;
+    color: #dbdbdb;
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*
+
+    PROJECTS
+
+*/
+
+.topics {
+    list-style-type: none;
+}
+.topics li {
+    font-family: poppins;
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 10px;
+    padding: 2%;
+}
+.topics-specs{
+    list-style-type: none;
+}
+.topics-specs li{
+    font-family: poppins;
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 8px;
+    padding: 1%;
+}
+h3{
+    font-family: poppins;
+    font-size: 22px;
+    padding: 5%;
+}
+h4{
+    font-family: poppins;
+    padding: 2%;
+    font-size: 20px;
+}
+.file-container {
+    display: flex;
+    justify-content: center;
+    padding: 1%
+}
+
+.file-item {
+    width: 150px;
+    height: 75px;
+    background-color: #262626;
+    pointer-events: auto;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: poppins;
+    transition: transform 0.2s ease;
+    margin: 0 5px; /* Adjust the margin value to control the gap between boxes */
+    color: #dbdbdb;
+    transition: transform 0.2s ease;
+}
+.file-item:hover{
+    transform: scale(1.1);
+}
+.file-container a{
+    text-decoration: none;
+}
